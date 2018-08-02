@@ -18,7 +18,14 @@
 
             foreach($body as $key => $value){
                 if($key == "sum" || $key == "sub" || $key == "div" || $key == "multi"){
-                    var_dump(calc($key, $value));
+                    $answer = calc($key, $value);
+                    echo json_encode(array(
+                        'status' => 'success'
+                        'answer' => $answer
+                    ));
+
+                    return;
+
                 } else {
                     error(404, "Bad Request");
                 }
