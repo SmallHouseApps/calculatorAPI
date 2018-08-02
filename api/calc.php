@@ -20,7 +20,7 @@
                 if($key == "sum" || $key == "sub" || $key == "div" || $key == "multi"){
                     $answer = calc($key, $value);
                     echo json_encode(array(
-                        'status' => 'success'
+                        'status' => 'success',
                         'answer' => $answer
                     ));
 
