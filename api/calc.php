@@ -11,8 +11,6 @@
                 $body = getXmlBodyData();
             } else 
             error(404, "API request not found");
-            
-            var_dump($body);
 
             if(!isset($body) || is_null($body) || $body == '') error(400, "Bad Request");
 
